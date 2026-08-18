@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0284C7">
+    <title>GODZILLA SPORTS ACADEMY — Aplikasi Manajemen Akademi Basket & Olahraga Terpadu</title>
+    <meta name="description" content="Platform terintegrasi untuk manajemen akademi basket: database atlet, raport radar evaluasi, presensi latihan, tagihan SPP WhatsApp, payroll pelatih, dan laporan finansial multi-cabang.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    },
+                    colors: {
+                        brand: {
+                            50: '#F0F9FF',
+                            100: '#E0F2FE',
+                            200: '#BAE6FD',
+                            300: '#7DD3FC',
+                            400: '#38BDF8',
+                            500: '#0EA5E9',
+                            600: '#0284C7',
+                            700: '#0369A1',
+                            800: '#075985',
+                            900: '#0C4A6E',
+                            950: '#082F49'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .court-pattern {
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.12) 0%, transparent 65%),
+                radial-gradient(circle at 10% 80%, rgba(2, 132, 199, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 90% 60%, rgba(56, 189, 248, 0.07) 0%, transparent 45%);
+        }
+        .glow-btn {
+            box-shadow: 0 10px 30px -8px rgba(14, 165, 233, 0.55), 0 4px 12px -2px rgba(2, 132, 199, 0.35);
+        }
+        .glow-btn:hover {
+            box-shadow: 0 16px 36px -8px rgba(14, 165, 233, 0.7), 0 6px 16px -2px rgba(2, 132, 199, 0.45);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col court-pattern selection:bg-brand-500 selection:text-white">
+
+    <!-- Header / Top Navigation -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-200/80 shadow-xs">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="logogodzilla.png" alt="Logo Godzilla Sports Academy" class="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105 duration-300">
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-xs font-black uppercase tracking-widest text-slate-500">
+                <a href="#fitur" class="hover:text-brand-600 transition-colors">Fitur Unggulan</a>
+                <a href="#keunggulan" class="hover:text-brand-600 transition-colors">Keunggulan</a>
+                <a href="#cara-install" class="hover:text-brand-600 transition-colors">Cara Install</a>
+            </nav>
+
+            <a href="godzilla.apk" download class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-wider text-white bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 shadow-sm transition-all duration-300 hover:scale-105 active:scale-95">
+                <i class="fa-brands fa-android text-sm"></i>
+                <span>Unduh APK</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main class="flex-grow">
+        <section class="relative pt-12 pb-20 sm:pt-16 sm:pb-28 overflow-hidden">
+            <!-- Background Decorative Rings -->
+            <div class="absolute -top-24 -right-24 w-96 h-96 border-[16px] border-brand-100/60 rounded-full pointer-events-none -z-10"></div>
+            <div class="absolute top-1/2 -left-32 w-80 h-80 border-[12px] border-sky-100/50 rounded-full pointer-events-none -z-10"></div>
+
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl text-center">
+                
+                <!-- Pill Badge -->
+                <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-brand-200 text-brand-700 text-xs font-extrabold uppercase tracking-wider shadow-sm mb-6 animate-pulse">
+                    <span class="flex h-2.5 w-2.5 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500"></span>
+                    </span>
+                    <span>Sistem Manajemen Akademi Basket & Olahraga Terpadu</span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
+                    Kelola Akademi Basket <br class="hidden sm:inline">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-brand-500 to-sky-400">
+                        Lebih Modern & Profesional
+                    </span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto font-medium leading-relaxed mb-10">
+                    Satu aplikasi all-in-one untuk pencatatan database atlet, raport radar evaluasi, presensi latihan, invoice SPP WhatsApp otomatis, rekap gaji pelatih, hingga laporan finansial multi-cabang yang akurat.
+                </p>
+
+                <!-- Download Actions Container -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-8">
+                    <a href="godzilla.apk" download class="glow-btn group w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-500 via-brand-600 to-brand-700 text-white font-extrabold text-sm uppercase tracking-wider rounded-2xl flex items-center justify-center gap-3.5 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0">
+                        <div class="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-download group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-[10px] text-sky-100 font-bold leading-tight">DOWNLOAD APLIKASI</div>
+                            <div class="text-base font-black leading-tight tracking-wide">GODZILLA.APK</div>
+                        </div>
+                    </a>
+
+                    <a href="#cara-install" class="w-full sm:w-auto px-6 py-4 bg-white hover:bg-slate-50 text-slate-700 hover:text-brand-600 font-extrabold text-xs uppercase tracking-wider rounded-2xl border border-slate-200 shadow-sm flex items-center justify-center gap-2.5 transition-colors">
+                        <i class="fa-solid fa-circle-question text-brand-500 text-sm"></i>
+                        <span>Petunjuk Pemasangan</span>
+                    </a>
+                </div>
+
+                <!-- Info Badges -->
+                <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-bold text-slate-500 uppercase tracking-widest">
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-shield-check text-emerald-500"></i>
+                        <span>Bebas Iklan & Aman</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-brands fa-android text-brand-500"></i>
+                        <span>Android 8.0 ke atas</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-bolt text-amber-500"></i>
+                        <span>Sinkronisasi Realtime</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Feature Pillars Section -->
+        <section id="fitur" class="py-16 sm:py-24 bg-white border-y border-slate-200/80">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-black uppercase tracking-[0.25em] text-brand-600 mb-3">FITUR LENGKAP</h2>
+                    <h3 class="font-display text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+                        Dirancang Khusus untuk Kebutuhan Pengurus, Pelatih, & Siswa
+                    </h3>
+                    <p class="text-slate-500 text-sm sm:text-base mt-4 font-medium">
+                        Semua operasional akademi dapat dikelola dari genggaman tanpa perlu pencatatan manual di kertas atau spreadsheet yang terpisah.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    
+                    <!-- Feature 1 -->
+                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-500/5 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h4 class="font-display text-lg font-black text-slate-900 mb-2">Database Siswa & Atlet</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Pencatatan lengkap Kategori Usia (KU), nomor punggung jersey, posisi bermain, asal sekolah, cabang latihan, serta status keanggotaan aktif/nonaktif.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-500/5 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h4 class="font-display text-lg font-black text-slate-900 mb-2">Raport & Radar Evaluasi</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Penilaian perkembangan atlet (Shooting, Dribbling, Passing, Defense, Stamina, Mental) dengan grafik visual radar chart dan ekspor gambar JPEG/PDF.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-500/5 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h4 class="font-display text-lg font-black text-slate-900 mb-2">Tagihan SPP & Invoice WhatsApp</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Kirim tagihan iuran SPP bulanan atau multi-bulan secara instan ke WhatsApp wali siswa, lengkap dengan rincian biaya dan kwitansi pembayaran resmi.
+                        </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-500/5 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+                        <h4 class="font-display text-lg font-black text-slate-900 mb-2">Presensi Latihan Realtime</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Monitoring kehadiran siswa dan pelatih pada setiap sesi latihan. Rekapitulasi kehadiran otomatis terhitung untuk evaluasi dan honorarium.
+                        </p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-500/5 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+                        <h4 class="font-display text-lg font-black text-slate-900 mb-2">Gaji Pelatih & Pembukuan Kas</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Perhitungan gaji pelatih berdasarkan sesi kehadiran, pencatatan kasbon, pembukuan arus kas (COA), serta rekap surplus/defisit operasional.
+                        </p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200/80 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-500/5 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center text-xl mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-file-excel"></i>
+                        </div>
+                        <h4 class="font-display text-lg font-black text-slate-900 mb-2">Ekspor Excel & PDF Resmi</h4>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                            Unduh buku besar keuangan, data inventaris, jadwal latihan, dan rekapitulasi anggota ke dalam format Excel (.xlsx) dengan tampilan sel yang rapi dan siap cetak.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Cara Install Section -->
+        <section id="cara-install" class="py-16 sm:py-24 bg-slate-100/70">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+                
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <h2 class="text-xs font-black uppercase tracking-[0.25em] text-brand-600 mb-3">PANDUAN PEMASANGAN</h2>
+                    <h3 class="font-display text-3xl font-black text-slate-900 tracking-tight">
+                        Cara Mudah Memasang Aplikasi di HP Android
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                        <div class="w-10 h-10 rounded-xl bg-brand-500 text-white font-display font-black text-lg flex items-center justify-center mb-6">
+                            1
+                        </div>
+                        <h4 class="font-display text-base font-black text-slate-900 mb-2">Unduh File APK</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Ketuk tombol <strong>Download APK</strong> di atas untuk mengunduh berkas instalasi <code>godzilla.apk</code> ke ponsel Anda.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                        <div class="w-10 h-10 rounded-xl bg-brand-500 text-white font-display font-black text-lg flex items-center justify-center mb-6">
+                            2
+                        </div>
+                        <h4 class="font-display text-base font-black text-slate-900 mb-2">Izinkan Pemasangan</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Buka berkas yang telah diunduh di bar notifikasi/File Manager. Jika muncul konfirmasi, pilih <em>"Izinkan dari sumber ini"</em>.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                        <div class="w-10 h-10 rounded-xl bg-brand-500 text-white font-display font-black text-lg flex items-center justify-center mb-6">
+                            3
+                        </div>
+                        <h4 class="font-display text-base font-black text-slate-900 mb-2">Mulai Menggunakan</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Buka aplikasi Godzilla Sports Academy, masuk menggunakan akun pengurus atau pelatih, dan kelola akademi Anda dengan mudah.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Call to action card inside guide -->
+                <div class="mt-12 bg-gradient-to-r from-brand-700 via-brand-800 to-slate-900 text-white p-8 sm:p-10 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div>
+                        <h4 class="font-display text-xl sm:text-2xl font-black mb-2">Siap Meningkatkan Manajemen Akademi Anda?</h4>
+                        <p class="text-sky-200 text-xs sm:text-sm font-medium">Unduh aplikasi sekarang dan rasakan kemudahan pengelolaan olahraga terintegrasi.</p>
+                    </div>
+                    <a href="godzilla.apk" download class="shrink-0 px-7 py-3.5 bg-brand-400 hover:bg-brand-300 text-slate-950 font-black text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95">
+                        <i class="fa-solid fa-download mr-1.5"></i> Unduh godzilla.apk
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-10 mt-auto">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-6">
+            
+            <div class="flex items-center gap-3">
+                <img src="logogodzilla.png" alt="Godzilla Sports Academy" class="h-8 w-auto object-contain">
+                <div class="text-left">
+                    <div class="text-[11px] font-black text-slate-800 tracking-wider">GODZILLA SPORTS ACADEMY</div>
+                    <div class="text-[9px] font-bold text-slate-400">Aplikasi Manajemen Olahraga & Basket</div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <span class="text-[9px] font-black text-slate-400 uppercase tracking-[0.2em]">POWERED BY</span>
+                <img src="logodribbllink.png" alt="Dribbllink" class="h-7 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
